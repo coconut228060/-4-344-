@@ -1,0 +1,13 @@
+import shutil
+import os
+
+source = "important_data.txt"
+destination = "backup/important_data.txt"
+
+# Створюємо директорію backup, якщо її немає
+os.makedirs("backup", exist_ok=True)
+
+# Переміщуємо файл
+shutil.move(source, destination)
+
+print("Файл important_data.txt успішно переміщено в backup.")
